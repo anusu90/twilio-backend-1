@@ -15,7 +15,7 @@ const port = process.env.PORT || 5050
 app.use((req, res, next) => {
 
     console.log("cors middleware");
-    let whitelistOrigins = ["http://localhost:3000"]
+    let whitelistOrigins = ["http://localhost:3000", "https://ecstatic-shannon-9abd08.netlify.app"]
     if (whitelistOrigins.indexOf(req.headers.origin) != -1) {
         res.header("Access-Control-Allow-Origin", req.headers.origin)
     };
